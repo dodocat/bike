@@ -1,2 +1,14 @@
 include ':bike'
-include ':Argon'
+//include ':Argon'
+//includeFlat('Argon')
+//project(':Argon').projectDir = new File(settingsDir, '../Argon/Argon')
+
+def sharedRootDir = new File(settingsDir, '../Argon' )
+
+include 'Argon'
+project( ':Argon' ).projectDir = new File(settingsDir, '../Argon/Argon' )
+
+println(project(':Argon').projectDir)
+// Product components
+
+//includeFlat 'ProductComponent1', 'ProductComponent2'
